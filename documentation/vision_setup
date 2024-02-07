@@ -1,0 +1,3 @@
+# add permissions to modify samples in vpi, make a backup of original files first
+sudo chmod ugo+wrx /opt/nvidia/vpi1/samples/
+

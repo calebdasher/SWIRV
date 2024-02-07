@@ -1,0 +1,5 @@
+# resize partition to full size
+sudo apt install gparted
+gparted
+# resize the ext4 partition to larger size
+
