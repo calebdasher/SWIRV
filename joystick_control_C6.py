@@ -3,12 +3,18 @@
 # https://www.pygame.org/docs/ref/joystick.html?highlight=squar
 
 # to use run pip3 to install all dependencies
+# from the command line run these, assuming you have the environmental path variables set up, reinstalling python with custom and check the add python to path box
+# pip3 install pyserial
+# pip3 install pygame
 
 import serial
 import serial.tools.list_ports
 import time
 import atexit
 import pygame
+
+# if you can't get the code to run due to serial port issue, you may need to install a driver (Windows 11)
+# https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads
 
 # code for finding which port ESP32 is connected to, manufacturer is "wch.cn" for C6
 # if using different device run Port_info
