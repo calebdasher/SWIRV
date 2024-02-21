@@ -1,0 +1,7 @@
+# Set up the GPS for ROS2
+# https://navigation.ros.org/tutorials/docs/navigation2_with_gps.html
+
+sudo apt install ros-foxy-robot-localization
+sudo apt install ros-foxy-mapviz
+sudo apt install ros-foxy-mapviz-plugins
+sudo apt install ros-foxy-tile-map

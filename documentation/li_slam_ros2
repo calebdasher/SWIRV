@@ -1,0 +1,26 @@
+# Set up li slam ros2
+# https://github.com/rsasaki0109/li_slam_ros2
+
+# need PCL 1.12 or later
+# downloaded pcl-1.14 tar.gz
+# https://github.com/PointCloudLibrary/pcl/releases
+# compiled according to instructiosn at
+# https://pcl.readthedocs.io/projects/tutorials/en/master/compiling_pcl_posix.html
+# This will take a while, about 1:30
+
+
+source /opt/ros/foxy/setup.bash
+cd ~/Desktop/ros2_ws/src
+git clone --recursive https://github.com/rsasaki0109/li_slam_ros2
+
+sudo add-apt-repository ppa:borglab/gtsam-release-4.1
+sudo apt update
+
+
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+
+cd ~/Desktop/ros2_ws
+rosdep update
+rosdep install --from-paths src --ignore-src -yr
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+

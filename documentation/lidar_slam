@@ -1,0 +1,19 @@
+# Set up Lidar Slam for ros2
+# https://github.com/rsasaki0109/li_slam_ros2
+
+source /opt/ros/foxy/setup.bash
+
+mkdir ~/Desktop/ros2_ws
+mkdir ~/Desktop/ros2_ws/src
+cd ~/Desktop/ros2_ws/src
+git clone --recursive https://github.com/rsasaki0109/li_slam_ros2
+
+sudo add-apt-repository ppa:borglab/gtsam-release-4.1
+sudo apt update
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+
+cd ..
+rosdep update
+rosdep install --from-paths src --ignore-src -yr
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+

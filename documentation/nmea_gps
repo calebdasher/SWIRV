@@ -1,0 +1,10 @@
+# https://github.com/ros-drivers/nmea_navsat_driver/tree/ros2
+mkdir ~/Desktop/nmea_ros2
+cd ~/Desktop/nmea_ros2
+# download zip from https://github.com/ros-drivers/nmea_navsat_driver/tree/ros2
+cd /nmea_navsat_driver/
+# get setuptools & build
+pip3 install --upgrade setuptools
+pip install --upgrade build
+# run setup
+

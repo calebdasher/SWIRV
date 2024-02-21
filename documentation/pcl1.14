@@ -1,0 +1,13 @@
+# need pcl1.12 or higher for li_slam_ros2 to install
+# install PCL1.14
+# download from
+# https://github.com/PointCloudLibrary/pcl/releases
+# https://pcl.readthedocs.io/projects/tutorials/en/master/compiling_pcl_posix.html
+cd ~/Downloads
+tar xvf pcl-pcl-1.14.0.tar.gz
+cd pcl-pcl-1.14.0/ && mkdir build && cd build
+cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make -j2
+sudo make -j2 install
+# This will take a while, about 2:00

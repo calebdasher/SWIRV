@@ -1,21 +1,88 @@
-To run a simple test, use instructions here
-https://github.com/unitreerobotics/unilidar_sdk/tree/main/unitree_lidar_sdk
+# To run a simple test, use instructions here
+# https://github.com/unitreerobotics/unilidar_sdk/tree/main/unitree_lidar_sdk
+
+###########################
+# Here are two setups, the first one sets up ROS Noetic, the second sets up ROS2-Foxy
+# You only need one, the setup we are using currently is ROS2-Foxy, so use the second set of instructions.
+###########################
+# 1
+# Install ROS Noetic with 
+# http://wiki.ros.org/ROS/Installation/TwoLineInstall/
+#wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_install_noetic.sh && chmod +x ./ros_install_noetic.sh && ./ros_install_noetic.sh
+
+# follow all instructions in this link.
+# https://github.com/unitreerobotics/point_lio_unilidar
+# Change 
+# sudo apt-get install ros-xxx-pcl-conversions
+# to
+#sudo apt-get install ros-noetic-pcl-conversions
+
+#git clone https://github.com/unitreerobotics/unilidar_sdk.git
+#cd unilidar_sdk/unitree_lidar_ros
+#catkin_make -j1
+#mkdir -p catkin_point_lio_unilidar/src
+#cd catkin_point_lio_unilidar/src
+#git clone https://github.com/unitreerobotics/point_lio_unilidar.git
+#cd ..
+#catkin_make -j1
+# if you are trying to use noetic to run the demo run this
+# source /opt/ros/noetic/setup.bash # Run this command to use ROS1 Noetic
+##########################################################################
 
 
-Install ROS Noetic with 
-http://wiki.ros.org/ROS/Installation/TwoLineInstall/
 
-follow all instructions in this link.
-https://github.com/unitreerobotics/point_lio_unilidar
-Change 
-sudo apt-get install ros-xxx-pcl-conversions
-to
-sudo apt-get install ros-noetic-pcl-conversions
 
-In the build section change 
-catkin_make 
-to 
-catkin_make -j1
-otherwise the system will freeze
+
+# set user to dialout, need to relog after running this command
+sudo adduser jetson dialout
+############################################################################
+# 2
+# download unitree sdk
+git clone https://github.com/unitreerobotics/unilidar_sdk.git
+cd unilidar_sdk/unitree_lidar_ros2
+
+# install ros2-foxy to use ROS2
+# follow these instructions
+# https://github.com/Razany98/ROS-2-installation-on-Jetson-Nano
+
+locale
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+locale
+
+
+apt-cache policy | grep universe or
+
+sudo apt install software-properties-common
+
+sudo add-apt-repository universe
+
+sudo apt update && sudo apt install curl gnupg2 lsb-release
+
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+
+sudo apt update
+sudo apt upgrade
+sudo apt install ros-foxy-desktop
+sudo apt install ros-foxy-ros-base
+
+# run this if you are trying to use ros2 foxy
+source /opt/ros/foxy/setup.bash
+
+# set up ros2 build system
+sudo apt install python3-colcon-common-extensions
+# run example here
+# https://github.com/unitreerobotics/unilidar_sdk/blob/main/unitree_lidar_ros2/src/unitree_lidar_ros2/README.md
+colcon build
+
+
+
+
+
 
 

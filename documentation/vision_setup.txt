@@ -1,4 +1,11 @@
 # add permissions to modify samples in vpi, make a backup of original files first
-cd /opt/nvidia/vpi1/samples
-sudo chmod -R 777 *
+# cd /opt/nvidia/vpi1/samples
+# sudo chmod -R 777 *
 
+# install tegra package for argus to run cameras
+# go to 
+# cd /usr/src/jetson_multimedia_api/argus
+# follow the instructions in the readme.txt
+# mkdir build && cd build
+# cmake ..
+# sudo make install
