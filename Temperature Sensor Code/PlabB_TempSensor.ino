@@ -12,6 +12,11 @@ void loop() {
   Serial.print(temperatureCelsius);
   Serial.println(" °C");
 
+  //Print the Fahrenheit to the serial monitor 
+  Serial.print("Temperature: ");
+  Serial.print(temperatureFahrenheit);
+  Serial.println(" °F");
+
   delay(1000);  // Wait for a moment before reading the temperature again
 }
 
@@ -54,8 +59,9 @@ float getTemperature() {
   // Calculate temperature from the data received
   int16_t rawTemperature = (data[1] << 8) | data[0];
   float temperatureCelsius = rawTemperature / 16.0;
-  
+  float temperatureFahrenheit = (temperatureCelsuis * 1.8) + 32;
   return temperatureCelsius;
+  return temperatureFahrenheit;
 }
 
 byte shiftIn(int pin) {
