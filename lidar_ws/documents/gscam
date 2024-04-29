@@ -1,0 +1,6 @@
+# to install the camera library run
+source devel/setup.bash
+git https://github.com/ros-drivers/gscam src/gscam
+catkin_make
+# using the launch file from https://forums.developer.nvidia.com/t/gscam-launch-file-for-jetson-nano-and-imx219-stereo-camera/272012/3
+

@@ -1,0 +1,15 @@
+# How to set up ROS Noetic
+#http://wiki.ros.org/noetic/Installation/Ubuntu
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt update
+sudo apt install ros-noetic-desktop-full
+
+# To run any ros command from command line you need to set your environemtal variables
+source /opt/ros/noetic/setup.bash
+# When you want to run project specific packages go to your project workspace and run
+source devel/setup.bash
+# When you want to install something git clone the package into your workspace/src directory
+# Then from the workspace directory run catkin_make for ros-noetic, if using ro2 use colcon_build
+

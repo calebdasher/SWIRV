@@ -1,0 +1,4 @@
+cd src
+git clone https://github.com/tu-darmstadt-ros-pkg/hector_slam
+cd ..
+catkin_make

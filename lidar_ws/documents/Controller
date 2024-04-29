@@ -1,0 +1,9 @@
+# we had problems using onewire for arduino idf running ESP32 3.0 alpha
+# this library worked, this is for the temperature sensor
+# download the development tree and extract it
+# go to Tasmota-development/lib/lib_basic/TasmotaOneWire-2.3.3
+# copy the files into your Documents/Arduino/libraries/OneWire directory and replace all
+https://github.com/arendst/Tasmota/tree/development/lib/lib_basic/TasmotaOneWire-2.3.3
+# We used a version of the example DS18x20_Temperature.ino in our sensor code
+# If you are reading this perhaps a newer version of ESP32 IDF for Arduino is available and this workaround might be unecessary
+

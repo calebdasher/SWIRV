@@ -1,0 +1,4 @@
+cd src
+git clone https://github.com/cartographer-project/cartographer
+cd ..
+catkin_make

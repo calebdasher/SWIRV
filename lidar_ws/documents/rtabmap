@@ -1,0 +1,20 @@
+# install dependencies
+sudo apt install ros-noetic-rtabmap*
+sudo apt install ros-noetic-libg20
+sudo apt install ros-noetic-gtsam
+sudo apt install ros-noetic-libpointmatcher
+
+source /opt/ros/noetic/setup.bash
+source devel/setup.bash
+
+
+# add rtabmap to project
+# cd .. 
+cd src
+git clone https://github.com/introlab/rtabmap_ros.git 
+cd src/rtabmap_ros
+
+catkin_make
+
+
+

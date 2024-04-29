@@ -1,0 +1,2 @@
+# https://github.com/ros-drivers/nmea_navsat_driver/tree/master
+sudo apt install ros-noetic-nmea-navsat-driver

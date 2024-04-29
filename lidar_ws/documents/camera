@@ -1,0 +1,18 @@
+# Command lines to get the image processing system installed
+# Run fro m workspace root directory, ie SWIRV_WS
+
+
+# https://github.com/ros-drivers/gscam
+
+sudo apt-get install gstreamer1.0-tools libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev
+
+# https://forums.developer.nvidia.com/t/gscam-launch-file-for-jetson-nano-and-imx219-stereo-camera/272012
+
+# Get the noetic branch, or otherwise if using a different ros version
+cd src
+git clone --single-branch --branch noetic https://github.com/ros-perception/image_pipeline/
+cd ..
+catkin_make
+
+# command to record video
+# gst-launch-1.0 nvarguscamerasrc num-buffers=2000 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=30/1, format=NV12' ! nvvidconv ! x264enc ! qtmux ! filesink location=test.mp4 -e

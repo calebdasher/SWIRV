@@ -1,0 +1,30 @@
+# You should follow the setup tutorial on 
+# https://github.com/unitreerobotics/unilidar_sdk/tree/main
+# Also use this for a lidar slam point cloud publisher
+# https://github.com/unitreerobotics/point_lio_unilidar
+# We tried many other systems and this one was the only one that we got working with the unitree L4 lidar
+cd src
+git clone https://github.com/unitreerobotics/unilidar_sdk.git
+cd ..
+catkin_make
+
+cd src
+git clone https://github.com/unitreerobotics/point_lio_unilidar.git
+cd ..
+catkin_make
+
+# make a folder in the src/point_lio_unilidar folder named PCD
+# this is needed to save the lidar scan cloud
+# view with pcl_viewer scans.pcd
+mkdir src/point_lio_unilidar/PCD
+
+# to run this lidar, need to run two files in their own terminals
+# terminal 1
+# source devel/setup.bash
+# roslaunch unitree_lidar_ros run_without_rviz.launch
+# terminal 2
+# source devel/setup.bash
+# roslaunch point_lio_unilidar mapping_unilidar.launch 
+# or run command: 
+# roslaunch start startup.launch
+
