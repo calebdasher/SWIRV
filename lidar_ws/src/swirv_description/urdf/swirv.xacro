@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<robot name="swirv" xmlns:xacro="https://www.ros.org/wiki/xacro">
+    <!--SWIRV Shallow Water Intelligent River Vehicle-->    
+</robot>
