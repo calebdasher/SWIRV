@@ -4,4 +4,4 @@ What currently works, are the files needed to wirelessly control SWIRV using two
 
 The pictures are various screenshots taken during the development process while attempting to get stereoscopic vision, and lidar working. The gps folder contains some gps sample code, which currently works, but probably won't end up as is in the final project. The documentation folder contains build scripts and instructions for installing and configuring each module that is currently being tested and developed for SWIRV.
 
-This project is planning to use ROS2, and currently running ROS2 Foxy, in order to develop a series of nodes and topics nessary to integrate all of SWIRV's sensors into a coherent control system necessary for autonomous navigation.
+This project is currently running ROS Noetic, but the lidar module is compatible with ROS 2 Foxy.
