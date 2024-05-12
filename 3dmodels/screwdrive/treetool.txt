@@ -1,0 +1,65 @@
+﻿            Model Name              Feat #  Feat Type          Feat Subtype    Current Rep: Master Rep 
+-------------------------------------------------------------------------------------------------------
+ SCREW_PONTOON_LID_FINAL.PRT                                                                           
+   Design Items                                                                                        
+   RIGHT                             1      Datum Plane                                                
+   TOP                               2      Datum Plane                                                
+   FRONT                             3      Datum Plane                                                
+   PRT_CSYS_DEF                      4      Coordinate System                                          
+   Extern Copy Geom id 40            5      Extern Copy Geom                                           
+   LID_BODY                          6      Protrusion         Extrude                                 
+   TOP_OF_LID_ROUNDS                 7      Round              General                                 
+   SEAL_SLOT                         8      Cut                Extrude                                 
+   LID_CUTOUT                        9      Cut                Extrude                                 
+   SIDE_OF_LID_ROUNDS               10      Round              General                                 
+   SEAL_ROUNDS                      11      Round              General                                 
+   FRONT_AND_BACK_DIVIDER           12      Protrusion         Extrude                                 
+   CENTER_SEAL                      13      Cut                Extrude                                 
+   CENTER_SEAL_ROUNDS               14      Round              General                                 
+   CENTER_OF_DIVIDER                15      Datum Plane                                                
+   SLOT_FOR_SPEED_CONTROLLER_WIRES  16      Cut                Extrude                                 
+   SLOT_FOR_MOTOR_WIRES             17      Cut                Extrude                                 
+   WIRE_SLOT_ROUNDS                 18      Round              General                                 
+   Round 6                          19      Round              General                                 
+   LIDAR_MOUNT_OUTLINE_IGNORE       20      Curve              Sketched Curve                          
+   LIDAR_MOUNT_SURFACE              21      Protrusion         Extrude                                 
+   LIDAR_MOUNT_SLOT_REFERENCE       22      Curve              Sketched Curve                          
+   ANGLED_DTM_FOR_SHELL             23      Datum Plane                                                
+   SHELL_CUTOUT_LIDAR_MOUNT_SU      24      Cut                Extrude                                 
+   LIDAR_MOUNT_SIZE_REFERENCE       25      Curve              Sketched Curve                          
+   LIDAR_MOUNT_CENTER               26      Datum Axis                                                 
+   HOLE_ANGLED_DTM                  27      Datum Plane                                                
+   HOLE_DIAMETER                    28      Curve              Sketched Curve                          
+   PNT1                             29      Datum Point                                                
+   LIDAR_MOUNTING_HOLES             30      Pattern                                                    
+   LIDAR_MOUNT_SLOT_CUTOUT          35      Cut                Extrude                                 
+   INTERIOR_SHELL_ROUNDS            36      Round              General                                 
+   EXTERIOR_SURFACE_ROUNDS          37      Round              General                                 
+   EXTERIOR_SURFACE_ROUND_FRONT     38      Round              General                                 
+   DTM1                             39      Datum Plane                                                
+   Group MOUNTING_BRACKETS          40      Group Head                                                 
+   Group MOUNTING_HOLES             43      Group Head                                                 
+   Mirror 1                         48      Mirror                                                     
+   Round 7                          57      Round              General                                 
+   DTM2                             58      Datum Plane                                                
+   STEREO_CAM_RECESS                59      Cut                Extrude                                 
+   PLEX_GLASS_SURFACE               60      Protrusion         Extrude                                 
+   RECESS_FOR_CAM_CABLES            61      Cut                Extrude                                 
+   Round 8                          62      Round              General                                 
+   Group STEREO_MOUNT_BRACKETS      63      Group Head                                                 
+   DTM3                             68      Datum Plane                                                
+   Hole 7                           69      Hole                                                       
+   Hole 8                           70      Hole                                                       
+   Extrude 3                        71      Cut                Extrude                                 
+   Hole 9                           72      Hole                                                       
+   Hole 10                          73      Hole                                                       
+   Group LIDAR_MOUNTING_BRACKETS    74      Group Head                                                 
+   Mirror 2                         78      Mirror                                                     
+   Mirror 3                         84      Mirror                                                     
+   Hole 15                          89      Hole                                                       
+   Hole 16                          90      Hole                                                       
+   Insert Here                                                                                         
+   Sections                         <None>                                                             
+     XSEC0001                       91      Cross Section                                              
+     XSEC0002                       92      Cross Section                                              
+     XSEC0003                       93      Cross Section                                              
